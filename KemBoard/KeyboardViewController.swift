@@ -10,6 +10,8 @@ import UIKit
 
 class KeyboardViewController: UIInputViewController {
 
+    var shouldClearDisplayBeforeInserting = true
+    
     @IBOutlet var abcButton: UIButton!
     
     var calculatorView: UIView!

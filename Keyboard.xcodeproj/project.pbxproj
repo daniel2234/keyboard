@@ -15,6 +15,8 @@
 		650744FC1B3A208A00C15409 /* KemBoard.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 650744F41B3A208A00C15409 /* KemBoard.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		650745041B3B465200C15409 /* Keyboard.xib in Resources */ = {isa = PBXBuildFile; fileRef = 650745031B3B465200C15409 /* Keyboard.xib */; };
 		650745051B3B627300C15409 /* Keyboard.xib in Resources */ = {isa = PBXBuildFile; fileRef = 650745031B3B465200C15409 /* Keyboard.xib */; };
+		650745071B3B7FB200C15409 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650744F81B3A208A00C15409 /* KeyboardViewController.swift */; };
+		650745091B3B803100C15409 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650745081B3B803100C15409 /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +63,7 @@
 		650744F71B3A208A00C15409 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		650744F81B3A208A00C15409 /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
 		650745031B3B465200C15409 /* Keyboard.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = Keyboard.xib; path = ../Keyboard.xib; sourceTree = "<group>"; };
+		650745081B3B803100C15409 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +94,7 @@
 		650744C01B3A1BA900C15409 = {
 			isa = PBXGroup;
 			children = (
+				650745081B3B803100C15409 /* ViewController.swift */,
 				650744CB1B3A1BA900C15409 /* Keyboard */,
 				650744E11B3A1BA900C15409 /* KeyboardTests */,
 				650744F51B3A208A00C15409 /* KemBoard */,
@@ -293,7 +297,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				650745091B3B803100C15409 /* ViewController.swift in Sources */,
 				650744CF1B3A1BA900C15409 /* AppDelegate.swift in Sources */,
+				650745071B3B7FB200C15409 /* KeyboardViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -520,6 +526,7 @@
 				650744EA1B3A1BA900C15409 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		650744EB1B3A1BA900C15409 /* Build configuration list for PBXNativeTarget "KeyboardTests" */ = {
 			isa = XCConfigurationList;
@@ -528,6 +535,7 @@
 				650744ED1B3A1BA900C15409 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		650744FD1B3A208A00C15409 /* Build configuration list for PBXNativeTarget "KemBoard" */ = {
 			isa = XCConfigurationList;
@@ -536,6 +544,7 @@
 				650744FF1B3A208A00C15409 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
