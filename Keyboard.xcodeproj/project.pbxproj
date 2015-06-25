@@ -8,11 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		650744CF1B3A1BA900C15409 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650744CE1B3A1BA900C15409 /* AppDelegate.swift */; };
-		650744D11B3A1BA900C15409 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650744D01B3A1BA900C15409 /* ViewController.swift */; };
 		650744D41B3A1BA900C15409 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 650744D21B3A1BA900C15409 /* Main.storyboard */; };
 		650744D61B3A1BA900C15409 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 650744D51B3A1BA900C15409 /* Images.xcassets */; };
-		650744D91B3A1BA900C15409 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 650744D71B3A1BA900C15409 /* LaunchScreen.xib */; };
 		650744E51B3A1BA900C15409 /* KeyboardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650744E41B3A1BA900C15409 /* KeyboardTests.swift */; };
+		650744F91B3A208A00C15409 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650744F81B3A208A00C15409 /* KeyboardViewController.swift */; };
+		650744FC1B3A208A00C15409 /* KemBoard.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 650744F41B3A208A00C15409 /* KemBoard.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		650745041B3B465200C15409 /* Keyboard.xib in Resources */ = {isa = PBXBuildFile; fileRef = 650745031B3B465200C15409 /* Keyboard.xib */; };
+		650745051B3B627300C15409 /* Keyboard.xib in Resources */ = {isa = PBXBuildFile; fileRef = 650745031B3B465200C15409 /* Keyboard.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -23,19 +25,42 @@
 			remoteGlobalIDString = 650744C81B3A1BA900C15409;
 			remoteInfo = Keyboard;
 		};
+		650744FA1B3A208A00C15409 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 650744C11B3A1BA900C15409 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 650744F31B3A208A00C15409;
+			remoteInfo = KemBoard;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		650745001B3A208A00C15409 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				650744FC1B3A208A00C15409 /* KemBoard.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		650744C91B3A1BA900C15409 /* Keyboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Keyboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		650744CD1B3A1BA900C15409 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		650744CE1B3A1BA900C15409 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		650744D01B3A1BA900C15409 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		650744D31B3A1BA900C15409 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		650744D51B3A1BA900C15409 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		650744D81B3A1BA900C15409 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		650744DE1B3A1BA900C15409 /* KeyboardTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KeyboardTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		650744E31B3A1BA900C15409 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		650744E41B3A1BA900C15409 /* KeyboardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardTests.swift; sourceTree = "<group>"; };
+		650744F41B3A208A00C15409 /* KemBoard.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = KemBoard.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		650744F71B3A208A00C15409 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		650744F81B3A208A00C15409 /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
+		650745031B3B465200C15409 /* Keyboard.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = Keyboard.xib; path = ../Keyboard.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +78,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		650744F11B3A208A00C15409 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -61,6 +93,7 @@
 			children = (
 				650744CB1B3A1BA900C15409 /* Keyboard */,
 				650744E11B3A1BA900C15409 /* KeyboardTests */,
+				650744F51B3A208A00C15409 /* KemBoard */,
 				650744CA1B3A1BA900C15409 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -70,6 +103,7 @@
 			children = (
 				650744C91B3A1BA900C15409 /* Keyboard.app */,
 				650744DE1B3A1BA900C15409 /* KeyboardTests.xctest */,
+				650744F41B3A208A00C15409 /* KemBoard.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -78,10 +112,8 @@
 			isa = PBXGroup;
 			children = (
 				650744CE1B3A1BA900C15409 /* AppDelegate.swift */,
-				650744D01B3A1BA900C15409 /* ViewController.swift */,
 				650744D21B3A1BA900C15409 /* Main.storyboard */,
 				650744D51B3A1BA900C15409 /* Images.xcassets */,
-				650744D71B3A1BA900C15409 /* LaunchScreen.xib */,
 				650744CC1B3A1BA900C15409 /* Supporting Files */,
 			);
 			path = Keyboard;
@@ -112,6 +144,24 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		650744F51B3A208A00C15409 /* KemBoard */ = {
+			isa = PBXGroup;
+			children = (
+				650745031B3B465200C15409 /* Keyboard.xib */,
+				650744F81B3A208A00C15409 /* KeyboardViewController.swift */,
+				650744F61B3A208A00C15409 /* Supporting Files */,
+			);
+			path = KemBoard;
+			sourceTree = "<group>";
+		};
+		650744F61B3A208A00C15409 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				650744F71B3A208A00C15409 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -122,10 +172,12 @@
 				650744C51B3A1BA900C15409 /* Sources */,
 				650744C61B3A1BA900C15409 /* Frameworks */,
 				650744C71B3A1BA900C15409 /* Resources */,
+				650745001B3A208A00C15409 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				650744FB1B3A208A00C15409 /* PBXTargetDependency */,
 			);
 			name = Keyboard;
 			productName = Keyboard;
@@ -150,6 +202,23 @@
 			productReference = 650744DE1B3A1BA900C15409 /* KeyboardTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		650744F31B3A208A00C15409 /* KemBoard */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 650744FD1B3A208A00C15409 /* Build configuration list for PBXNativeTarget "KemBoard" */;
+			buildPhases = (
+				650744F01B3A208A00C15409 /* Sources */,
+				650744F11B3A208A00C15409 /* Frameworks */,
+				650744F21B3A208A00C15409 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KemBoard;
+			productName = KemBoard;
+			productReference = 650744F41B3A208A00C15409 /* KemBoard.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -165,6 +234,9 @@
 					650744DD1B3A1BA900C15409 = {
 						CreatedOnToolsVersion = 6.3.2;
 						TestTargetID = 650744C81B3A1BA900C15409;
+					};
+					650744F31B3A208A00C15409 = {
+						CreatedOnToolsVersion = 6.3.2;
 					};
 				};
 			};
@@ -183,6 +255,7 @@
 			targets = (
 				650744C81B3A1BA900C15409 /* Keyboard */,
 				650744DD1B3A1BA900C15409 /* KeyboardTests */,
+				650744F31B3A208A00C15409 /* KemBoard */,
 			);
 		};
 /* End PBXProject section */
@@ -192,8 +265,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				650745041B3B465200C15409 /* Keyboard.xib in Resources */,
 				650744D41B3A1BA900C15409 /* Main.storyboard in Resources */,
-				650744D91B3A1BA900C15409 /* LaunchScreen.xib in Resources */,
 				650744D61B3A1BA900C15409 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -205,6 +278,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		650744F21B3A208A00C15409 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				650745051B3B627300C15409 /* Keyboard.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -212,7 +293,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				650744D11B3A1BA900C15409 /* ViewController.swift in Sources */,
 				650744CF1B3A1BA900C15409 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -225,6 +305,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		650744F01B3A208A00C15409 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				650744F91B3A208A00C15409 /* KeyboardViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -232,6 +320,11 @@
 			isa = PBXTargetDependency;
 			target = 650744C81B3A1BA900C15409 /* Keyboard */;
 			targetProxy = 650744DF1B3A1BA900C15409 /* PBXContainerItemProxy */;
+		};
+		650744FB1B3A208A00C15409 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 650744F31B3A208A00C15409 /* KemBoard */;
+			targetProxy = 650744FA1B3A208A00C15409 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -242,14 +335,6 @@
 				650744D31B3A1BA900C15409 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		650744D71B3A1BA900C15409 /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				650744D81B3A1BA900C15409 /* Base */,
-			);
-			name = LaunchScreen.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -392,6 +477,30 @@
 			};
 			name = Release;
 		};
+		650744FE1B3A208A00C15409 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = KemBoard/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		650744FF1B3A208A00C15409 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = KemBoard/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -417,6 +526,14 @@
 			buildConfigurations = (
 				650744EC1B3A1BA900C15409 /* Debug */,
 				650744ED1B3A1BA900C15409 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		650744FD1B3A208A00C15409 /* Build configuration list for PBXNativeTarget "KemBoard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				650744FE1B3A208A00C15409 /* Debug */,
+				650744FF1B3A208A00C15409 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
