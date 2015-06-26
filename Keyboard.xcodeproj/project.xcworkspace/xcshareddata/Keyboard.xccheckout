@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>6576D26F-6658-4917-8D8C-D5C0B12074B5</string>
 	<key>IDESourceControlProjectName</key>
-	<string>Keyboard</string>
+	<string>project</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>E061F6399205D7C7EF7040E139D4C8CB2B47C251</key>
 		<string>https://github.com/daniel2234/keyboard.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Keyboard.xcodeproj</string>
+	<string>Keyboard.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>E061F6399205D7C7EF7040E139D4C8CB2B47C251</key>

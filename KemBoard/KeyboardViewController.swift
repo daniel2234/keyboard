@@ -8,7 +8,23 @@
 
 import UIKit
 
+enum Operation{
+    case Addition
+    case Multiplication
+    case Subtraction
+    case Division
+    case None
+}
+
+
+
 class KeyboardViewController: UIInputViewController {
+    //stores the temporary result
+    var internalMemory = 0.0
+    //this property stores the next operation
+    var nextOperation = Operation.None
+    //another one that to remember if it should apply the nextOperation after an operation is pressed
+    var shouldCompute = false
 
     var shouldClearDisplayBeforeInserting = true
     
@@ -65,6 +81,9 @@ class KeyboardViewController: UIInputViewController {
         
     }
     
+    
+    
+    
     func loadInterface(){
         //load the nib file
         var calculatorNib = UINib(nibName: "Keyboard", bundle: nil)
@@ -84,8 +103,131 @@ class KeyboardViewController: UIInputViewController {
     
     @IBAction func clearDisplay(){
         display.text = "0"
+        internalMemory = 0
+        nextOperation = Operation.Addition
+        shouldClearDisplayBeforeInserting = true
     }
 
+    
+    @IBAction func didTapNumber(number: UIButton){
+        if shouldClearDisplayBeforeInserting{
+            display.text = ""
+            shouldClearDisplayBeforeInserting = false
+        }
+        
+        if var numberAsString = number.titleLabel?.text {
+            var numberAsNSString = numberAsString as NSString
+            if var oldDisplay = display?.text!{
+                display.text = "\(oldDisplay)\(numberAsNSString.intValue)"
+            } else{
+                display.text = "\(numberAsNSString.intValue)"
+            }
+        }
+    }
+    
+    @IBAction func didTapDot(){
+        if let input = display?.text{
+            var hasDot = false
+            for ch in input.unicodeScalars{
+                if ch == "."{
+                    hasDot = true
+                    break
+                }
+            }
+            if hasDot == false{
+                display.text = "\(input)."
+            }
+        }
+    }
+    
+    
+    @IBAction func didTapInsert(){
+        var proxy = textDocumentProxy as! UITextDocumentProxy
+        
+        if let input = display?.text as String?{
+            proxy.insertText(input)
+        }
+    }
+    
+    @IBAction func didTapOperation(operation:UIButton){
+        if shouldCompute{
+            computeLastOperation()
+        }
+        
+        if var op = operation.titleLabel?.text{
+            switch op{
+            case "+":
+                nextOperation = Operation.Addition
+            case "-":
+                nextOperation = Operation.Subtraction
+            case "X":
+                nextOperation = Operation.Multiplication
+            case "%":
+                nextOperation = Operation.Division
+            default:
+                nextOperation = Operation.None
+            }
+        }
+    }
+    
+    
+    
+    
+    @IBAction func computeLastOperation(){
+        
+        //do not compute if another operation is pressed without inputing another number first
+        shouldCompute = false
+        
+        if var input = display?.text{
+            var inputAsDouble = (input as NSString).doubleValue
+            var result = 0.0
+            
+            //apply the operation
+            switch nextOperation{
+            case .Addition:
+                result = internalMemory + inputAsDouble
+            case .Subtraction:
+                result = internalMemory - inputAsDouble
+            case .Multiplication:
+                result = internalMemory * inputAsDouble
+            case .Division:
+                result = internalMemory / inputAsDouble
+            default:
+                result = 0.0
+            }
+            
+            nextOperation = Operation.None
+            
+            var output = "\(result)"
+            
+            if output.hasSuffix(".0"){
+                output = "\(Int(result))"
+            }
+            
+            //truncating the last five digits
+            var components = output.componentsSeparatedByString(".")
+            if components.count >= 2{
+                var beforePoint = components[0]
+                var afterPoint = components[1]
+                if afterPoint.lengthOfBytesUsingEncoding(NSUTF8StringEncoding) > 5{
+                    let index: String.Index = advance(afterPoint.startIndex,5)
+                    afterPoint = afterPoint.substringToIndex(index)
+                }
+                output = beforePoint + "." + afterPoint
+            }
+            //update the display
+            display.text = output
+            
+            //save the result
+            internalMemory = result
+            
+            //remember to clear the display before  inserting a new number
+            shouldClearDisplayBeforeInserting = true
+        }
+    }
+    
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated
